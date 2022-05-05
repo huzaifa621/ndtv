@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NDTV-clone</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: fit-content ; margin: auto; margin-bottom: 10px">
+      <input id="search" type="text" />
+      <button onclick="searchFunction()">Search</button>
+    </div>
+    <div id="container">
+      <!-- divs -->
+    </div>
+  </body>
+</html>
+
+<script>
+  fetch(
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=5bdfedf06bb14efb88aab3adeb930767"
+  )
+    .then((res) => res.json())
+    .then((data) => display(data.articles));
+
+  const display = (data) => {
+    console.log(data);
+    let container = document.getElementById("container");
+    for (let i = 0; i < data.length; i++) {
+      let div = document.createElement("div");
+      let div1 = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = data[i].urlToImage;
+      img.style.width = "300px";
+      img.style.borderRadius = "15px";
+      img.style.cursor = "pointer";
+      img.addEventListener("click", () => {
+        window.location.href = data[i].url;
+      });
+
+      let para = document.createElement("p");
+      para.innerText = data[i].title;
+      para.style.fontSize = "14px";
+
+      div1.style.height = "200px";
+      div1.append(img);
+      div.append(div1, para);
+      container.append(div);
+    }
+  };
+
+  const searchFunction = () => {
+    let container = document.getElementById("container");
+    container.innerHTML = null;
+    let inputVal = document.getElementById("search");
+
+    fetch(
+      `https://newsapi.org/v2/everything?q=${inputVal.value}&from=2022-05-02&sortBy=popularity&apiKey=5bdfedf06bb14efb88aab3adeb930767`
+    )
+      .then((res) => res.json())
+      .then((data) => display(data.articles));
+  };
+</script>
