@@ -1,0 +1,7 @@
+.upperChildHover:hover {
+  background: black;
+}
+
+.lowerChildHover:hover {
+  text-decoration: underline;
+}
