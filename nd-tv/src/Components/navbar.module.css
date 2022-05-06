@@ -1,0 +1,37 @@
+.upperChildHover:hover {
+  background: black;
+}
+
+.lowerChildHover:hover {
+  text-decoration: underline;
+}
+
+.dataDiv{
+  display:flex;
+  border-bottom: 1px solid rgb(96, 83, 83);
+  width:60%;
+  margin: auto;
+column-gap: 20px;
+row-gap: 20px;
+margin-bottom:20px;
+cursor: pointer;
+/* align-items:center;
+justify-content:center; */
+
+}
+.dataDiv img{
+  margin-top:12%;
+  height: 180px;
+  width:180px;
+  border-radius: 10px;
+}
+
+.innerDiv{
+  display:flex;
+  flex-direction: column;
+ justify-content: space-evenly;
+}
+.innerDiv :nth-child(1){
+
+  font-weight: bold;
+}

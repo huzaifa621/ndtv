@@ -1,12 +1,11 @@
-import "./App.css";
-import Search from "./components/Search";
+import "./styles.css";
 
-function App() {
+import MainRoutes from "./Routes/MainRoutes";
+
+export default function App() {
   return (
     <div className="App">
-      <Search />
+      <MainRoutes />
     </div>
   );
 }
-
-export default App;
