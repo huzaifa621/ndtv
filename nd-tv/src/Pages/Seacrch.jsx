@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styles from "../Components/navbar.module.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import data from "../db.json";
+
 // console.log("data:", data);
 const Seacrch = () => {
   const [dataSearch, setdataSearch] = useState([]);
   const { Search } = useParams();
+  // const navigate = ()
   // console.log("Search:", Search);
+  const navigate = useNavigate();
   const handleClick = (item) => {
-    console.log("item:", item);
+    let arr = [];
+
+    arr.push(item);
+
+    localStorage.setItem("item", JSON.stringify(arr));
+    navigate(`/SearchPage`);
   };
   useEffect(() => {
     for (let k in data) {
