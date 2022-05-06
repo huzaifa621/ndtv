@@ -76,8 +76,9 @@ const AfterMoreIconImage = styled.img`
 
 const SearchDiv = styled.div`
   position: -webkit-sticky;
-  position: sticky;
-  top: 50px;
+  position: absolute;
+  top: 90px;
+  z-index: 100;
   width: fit-content;
   padding: 10px 30px 10px 10px;
   margin-left: 72%;
