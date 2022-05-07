@@ -87,6 +87,7 @@ const NavBar = () => {
   const [show, setShow] = useState(false);
   const [searchShow, setSearchShow] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+
   const navigate = useNavigate();
   const handleMore = () => {
     setShow(show ? false : true);
@@ -96,7 +97,7 @@ const NavBar = () => {
     setSearchShow(searchShow ? false : true);
   };
   const handleSearch = () => {
-    navigate(`/${searchValue}`);
+    navigate(`/Search/${searchValue}`);
   };
 
   return (
@@ -203,6 +204,7 @@ const NavBar = () => {
       <div style={sticky}>
         <div style={{ marginRight: "25px" }}>
           <img
+            onClick={() => navigate("/")}
             style={{ cursor: "pointer", width: "100px" }}
             src={ndtv}
             alt="ndtv_logo"
@@ -316,6 +318,7 @@ const NavBar = () => {
             style={{ width: "200px", height: "20px" }}
             onChange={(e) => setSearchValue(e.target.value)}
             type="text"
+            value={searchValue}
             placeholder="Search here..."
           />
           <button
