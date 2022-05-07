@@ -38,8 +38,29 @@ const Seacrch = () => {
               </div>
 
               <div className={styles.innerDiv}>
-                <div>{item.title}</div>
-                <div>{item.content}</div>
+                <div style={{ marginBottom: "30px" }}>{item.title}</div>
+                <div style={{ color: "#717171" }}>{item.content}</div>
+                <div
+                  style={{
+                    width: "fit-content",
+                    marginTop: "7px",
+                    color: "#999",
+                    display: "flex",
+                  }}
+                >
+                  <img
+                    style={{ height: "20px", width: "20px" }}
+                    src="		https://www.ndtv.com/static/images/domain_favicons/www-ndtv-com.png?v1"
+                    alt=""
+                  />
+                  <p
+                    style={{
+                      paddingLeft: "10px",
+                    }}
+                  >
+                    www.ndtv.com
+                  </p>
+                </div>
               </div>
             </div>
           </div>
