@@ -1,0 +1,110 @@
+
+
+*{
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+}
+
+.blue{
+    color: rgb(88, 88, 158);
+}
+
+.india{
+    font-weight: 800;
+}
+
+.trend{
+  padding: 7px 0 0 60px;
+   font-family: sans-serif;
+   font-weight: 500;
+  height: 25px;
+  width: 170px;
+  border-radius: 5px;
+  color: black;
+ 
+
+   background-color: #f5f5f5;
+}
+.trending{
+    margin-left: 170px;
+}
+
+
+
+.smallc{
+    display: flex;
+    width: 40%;
+  
+   margin-left: 170px;
+   margin-bottom: 25px;
+  
+
+}
+
+
+.imgS{
+    width: 60px;
+    height: 48px;
+    border-radius: 5px;
+    margin-top: 20px;
+    
+    }
+
+    .text{
+        width: 180px;
+        margin-left: 10px;
+        font-size:14px;
+        word-spacing: 3px;
+    }
+.text:hover{
+    color: rgb(36, 61, 185);
+}
+
+
+.right{
+  
+    margin-left: 70px;
+    width: 700px;
+    
+   
+}
+    
+.mainR{
+
+    display: flex;
+    border: 0.001vh solid rgb(245, 237, 237);
+    margin-bottom: 20px;
+     border-radius: 10px;
+     margin: none;
+     padding: 0 15px 15px 15px;
+   
+}
+
+.fonts{
+    font-size: 13px;
+    margin: 0 0 10px 0;
+}
+
+h4{
+    font-size:22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  font-family:  sans-serif;
+    color: rgba(31, 27, 27, 0.382);
+
+}
+.mainR:hover{
+    box-shadow: rgba(107, 107, 112, 0.2) 0px 7px 29px 0px;
+}
+
+
+.imgB{
+    width: 140px;
+    height: 110px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+   
+}
